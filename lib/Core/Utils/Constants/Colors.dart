@@ -1,7 +1,9 @@
 // ignore: file_names
-import'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class ColorsManger {
-  static const Color kBlack = Color(0xff18171c);
-  static const Color kPrimaryColor = Color(0xff8012DC);
+  static const Color kBlack = Color.fromARGB(255, 0, 0, 0);
+  static const Color kPrimaryColor = Color.fromARGB(255, 159, 15, 25);
+  static const Color kSecondaryColor = Color.fromARGB(255, 66, 16, 15);
+  static const kveryWhite = Color.fromARGB(255, 255, 255, 255);
 }

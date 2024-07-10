@@ -19,7 +19,7 @@ Future<String> chechWhichScreen() async {
       return RoutesName.kSplashScreen;
     }
   }
-  return RoutesName.kOnBoardingScreen;
+  return RoutesName.kLoginScreen;
 }
 
 Future<String?> getAndroidVersion() async {
@@ -41,7 +41,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Galaxy',
       theme: ThemeData(
         useMaterial3: true,
       ),
