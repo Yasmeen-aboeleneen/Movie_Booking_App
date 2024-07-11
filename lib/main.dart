@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
 import 'Core/Routes/routes.dart';
 
 void main() async {
@@ -40,14 +42,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Galaxy',
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      routes: RoutesManger.routes,
-      initialRoute: routesName,
-    );
+    return Sizer(builder:
+        (BuildContext context, Orientation orientation, DeviceType deviceType) {
+      return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Galaxy',
+        theme: ThemeData(
+          useMaterial3: true,
+        ),
+        routes: RoutesManger.routes,
+        initialRoute: routesName,
+      );
+    });
   }
 }
